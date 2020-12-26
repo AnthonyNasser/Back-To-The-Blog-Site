@@ -1,0 +1,11 @@
+{
+  "name": "blog-site",
+  "version": "1.0.0",
+  "description": "This is a template for a blog site created in the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Nasser",
+  "license": "ISC"
+}
