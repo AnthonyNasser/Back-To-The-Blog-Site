@@ -5,22 +5,22 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 const Header = () => {
 	return (
 		<header>
-			<Navbar bg='light' variant='light' expand='lg' collapseOnSelect>
+			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
 				<Container>
 					<LinkContainer to='/'>
-						<Navbar.Brand>A Blog Site</Navbar.Brand>
+						<Navbar.Brand>Back to the Blog Site</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
-					<LinkContainer to='/blogs'>
-						<Nav.Link>
-							<i className='fas fa-book fa-fw'></i>Sign In
-						</Nav.Link>
-					</LinkContainer>
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ml-auto'>
+							<LinkContainer to='/blogs'>
+								<Nav.Link>
+									<i className='fas fa-book fa-fw'></i>Blogs
+								</Nav.Link>
+							</LinkContainer>
 							<LinkContainer to='/login'>
 								<Nav.Link>
-									<i className='fas fa-user'></i>Sign In
+									<i className='fas fa-user fa-fw'></i>Sign In
 								</Nav.Link>
 							</LinkContainer>
 						</Nav>
