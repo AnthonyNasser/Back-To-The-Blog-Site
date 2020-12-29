@@ -1,15 +1,32 @@
 import express from 'express'
-const app = express()
+import colors from 'colors'
 import dotenv from 'dotenv'
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
+import connectDB from './config/db.js'
+
+import blogRoutes from './routes/blogRoutes.js'
 
 dotenv.config()
+connectDB()
 
-app.get('/api', (req, res) => {
+const app = express()
+
+app.get('/', (req, res) => {
 	res.send('API is running...')
 })
+
+app.use('/api/blogs', blogRoutes)
+
+// 404 error handling
+app.use(notFound)
+
+// JSON error handling instead of HTML
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 app.listen(
 	PORT,
-	console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+	console.log(
+		`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+	)
 )
