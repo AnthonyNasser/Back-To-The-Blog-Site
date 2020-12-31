@@ -14,12 +14,17 @@ const LandingPage = () => {
 					<Row>
 						<Col>
 							<h4>
-								This is a template blog site that is inspired by the the
-								delorean ipsum generator (of which all the blogs are composed).
-								The site uses MongoDB, Express, React.js, Node.js,
-								React-Bootstrap, React-Router, and a few other dependencies.You
-								are free to use it for any of your blogging, copy/pasting, or
-								personal purposes.
+								This is a template blog site that is inspired by the{' '}
+								<a
+									target='_blank'
+									href='https://satoristudio.net/delorean-ipsum/'
+								>
+									delorean ipsum generator
+								</a>{' '}
+								(of which most of the blogs are composed). The site uses
+								MongoDB, Express, React.js, Node.js, Redux.js, React-Bootstrap,
+								React-Router, and a few other dependencies. You are free to use
+								it for any of your blogging, copy/pasting, or personal purposes.
 							</h4>
 						</Col>
 					</Row>
