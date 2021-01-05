@@ -18,6 +18,7 @@ const LandingPage = () => {
 								<a
 									target='_blank'
 									href='https://satoristudio.net/delorean-ipsum/'
+									style={{ color: '#73ffb7' }}
 								>
 									delorean ipsum generator
 								</a>{' '}
@@ -34,7 +35,7 @@ const LandingPage = () => {
 								target='_blank'
 								href='https://github.com/AnthonyNasser/Blog-Site'
 							>
-								<Button variant='primary' size='lg' block>
+								<Button variant='info' size='lg' block>
 									Take me to the code!
 								</Button>
 							</a>

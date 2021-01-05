@@ -12,6 +12,10 @@ const blogSchema = mongoose.Schema(
 			type: String,
 			required: false,
 		},
+		imageCaption: {
+			type: String,
+			required: false,
+		},
 		article: {
 			type: String,
 			required: true,

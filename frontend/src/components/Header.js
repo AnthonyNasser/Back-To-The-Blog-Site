@@ -8,19 +8,23 @@ const Header = () => {
 			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
 				<Container>
 					<LinkContainer to='/'>
-						<Navbar.Brand>Back to the Blog Site</Navbar.Brand>
+						<Navbar.Brand>
+							<i style={{ color: '#73ffb7' }} className='fas fa-fire fa-fw'></i>
+							Back to the Blog Site
+						</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ml-auto'>
 							<LinkContainer to='/blogs'>
 								<Nav.Link>
-									<i className='fas fa-book fa-fw'></i>Blogs
+									<i style={{ color: '#73ffb7' }} className='fas fa-book fa-fw'></i>
+									Blogs
 								</Nav.Link>
 							</LinkContainer>
 							<LinkContainer to='/login'>
 								<Nav.Link>
-									<i className='fas fa-user fa-fw'></i>Sign In
+									<i style={{ color: '#ff6161' }} className='fas fa-user fa-fw'></i>Sign In
 								</Nav.Link>
 							</LinkContainer>
 						</Nav>

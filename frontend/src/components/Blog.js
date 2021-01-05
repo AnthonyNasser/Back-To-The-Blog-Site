@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
 			<Card.Body>
 				<Link to={`/blog/${blog._id}`}>
 					<Card.Title as='div'>
-						<strong>{blog.title}</strong>
+						<strong style={{ color: '#73ffb7' }}>{blog.title}</strong>
 					</Card.Title>
 				</Link>
 				<Card.Text>
