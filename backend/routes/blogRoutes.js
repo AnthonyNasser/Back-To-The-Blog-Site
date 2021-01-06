@@ -1,35 +1,13 @@
 import express from 'express'
-import asyncHandler from 'express-async-handler'
 const router = express.Router()
-import Blog from '../models/blogModel.js'
+import { getBlogs, getBlogById } from '../controllers/blogController.js'
 
-// @desc    Fetch all blogs
-// @route   GET /api/blogs
-// @access  public
-router.get(
-	'/',
-	asyncHandler(async (req, res) => {
-		const blogs = await Blog.find({})
-		res.json(blogs)
-	})
-)
+// Route Specifications can be found in '../controllers/blogController.js'
 
-// @desc    Fetch single blog
-// @route   GET /api/blogs/:id
-// @access  public
-router.get(
-	'/:id',
-	asyncHandler(async (req, res) => {
-		const blog = await Blog.findById(req.params.id)
+// // Get all blogs
+router.route('/').get(getBlogs)
 
-		if (blog) {
-			res.json(blog)
-		} else {
-			// override default of 500
-			res.status(404)
-			throw new Error('Blog not found')
-		}
-	})
-)
+// // Get single blog
+router.route('/:id').get(getBlogById)
 
 export default router
