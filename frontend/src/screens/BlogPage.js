@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Image, ListGroup, Button, Figure} from 'react-bootstrap'
+import { Row, Col, ListGroup, Button, Figure } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { listBlogDetails } from '../actions/blogActions'
 
 const BlogPage = ({ history, match }) => {
-	const [qty, setQty] = useState(0)
 	const dispatch = useDispatch()
 
 	const blogDetails = useSelector((state) => state.blogDetails)
@@ -36,11 +35,7 @@ const BlogPage = ({ history, match }) => {
 					<Col md={5}>
 						<ListGroup.Item>
 							<Figure>
-								<Figure.Image
-									src={blog.image}
-									alt={blog.title}
-									fluid
-								/>
+								<Figure.Image src={blog.image} alt={blog.title} fluid />
 								<Figure.Caption>{blog.imageCaption}</Figure.Caption>
 							</Figure>
 						</ListGroup.Item>
@@ -58,8 +53,8 @@ const BlogPage = ({ history, match }) => {
 							</ListGroup.Item>
 							<ListGroup.Item>
 								<Button
-									onClick={saveArticleHandler} 
-									variant='info' 
+									onClick={saveArticleHandler}
+									variant='info'
 									type='button'
 								>
 									Save Article

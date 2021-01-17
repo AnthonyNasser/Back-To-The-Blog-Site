@@ -17,6 +17,7 @@ const LandingPage = () => {
 								This is a template blog site that is inspired by the{' '}
 								<a
 									target='_blank'
+									rel='noreferrer'
 									href='https://satoristudio.net/delorean-ipsum/'
 									style={{ color: '#73ffb7' }}
 								>
@@ -33,6 +34,7 @@ const LandingPage = () => {
 						<Col>
 							<a
 								target='_blank'
+								rel='noreferrer'
 								href='https://github.com/AnthonyNasser/Blog-Site'
 							>
 								<Button variant='info' size='lg' block>
