@@ -14,11 +14,12 @@ const LoginPage = ({ location, history }) => {
 	const dispatch = useDispatch()
 
 	const userLogin = useSelector((state) => state.userLogin)
-	const { loading, error, userInfo } = userLogin
+	const { error, loading, userInfo } = userLogin
 
 	const redirect = location.search ? location.search.split('=')[1] : '/'
 
 	useEffect(() => {
+		console.log(userInfo)
 		if (userInfo) {
 			history.push(redirect)
 		}
@@ -32,8 +33,8 @@ const LoginPage = ({ location, history }) => {
 	return (
 		<FormContainer>
 			<h1>Sign In</h1>
-			{error && <Message variant='danger'>{error}</Message>}
 			{loading && <Loader />}
+			{error && <Message variant='danger'>{error}</Message>}
 			<Form onSubmit={submitHandler}>
 				<Form.Group controlId='email'>
 					<Form.Label>Email Address</Form.Label>
@@ -60,12 +61,16 @@ const LoginPage = ({ location, history }) => {
 				</Button>
 			</Form>
 
-			<Row className='py-3'>
+			<Row className='py-3 px-3'>
 				<Col>
+					<Row>
 					New to the Site?
-					<Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-						Register
-					</Link>
+					</Row>
+					<Row>
+						<Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+							Register here!
+						</Link>
+					</Row>
 				</Col>
 			</Row>
 		</FormContainer>

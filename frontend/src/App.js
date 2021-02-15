@@ -7,6 +7,8 @@ import LandingPage from './screens/LandingPage'
 import BlogPage from './screens/BlogPage'
 import AllBlogsPage from './screens/AllBlogsPage'
 import LoginPage from './screens/LoginPage'
+import RegisterPage from './screens/RegisterPage'
+
 
 const App = () => {
 	return (
@@ -14,10 +16,11 @@ const App = () => {
 			<Header />
 			<main className='py-3'>
 				<Container>
-					<Route path='/login' component={LoginPage} />
 					<Route path='/blog/:id' component={BlogPage} />
 					<Route path='/blogs' component={AllBlogsPage} />
-					<Route path='/' component={LandingPage} exact />
+					<Route path='/login' component={LoginPage} />
+					<Route path='/register' component={RegisterPage} />
+					<Route path='/' exact component={LandingPage} />
 				</Container>
 			</main>
 			<Footer />
