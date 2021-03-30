@@ -8,13 +8,14 @@ const LandingPage = () => {
 				<Container>
 					<Row>
 						<Col>
-							<h1>Hello, my name is ABC XYZ...</h1>
+							<h1>Where We're Going, We Don't Need Roads.</h1>
 						</Col>
 					</Row>
 					<Row>
 						<Col>
 							<h4>
-								This is a template blog site that is inspired by the{' '}
+								This is a template blog site inspired by the Back to The Future Trilogy and created for learning purposes. 
+								All blogs on this site were produced by the ingenius{' '}
 								<a
 									target='_blank'
 									rel='noreferrer'
@@ -22,11 +23,11 @@ const LandingPage = () => {
 									style={{ color: '#73ffb7' }}
 								>
 									delorean ipsum generator
-								</a>{' '}
-								(of which most of the blogs are composed). The site uses
+								</a>{' '}.
+								The site uses
 								MongoDB, Express, React.js, Node.js, Redux.js, React-Bootstrap,
 								React-Router, and a few other dependencies. You are free to use
-								it for any of your blogging, copy/pasting, or personal purposes.
+								it for any learning, blogging, or copy/pasting purposes!
 							</h4>
 						</Col>
 					</Row>
@@ -38,7 +39,7 @@ const LandingPage = () => {
 								href='https://github.com/AnthonyNasser/Blog-Site'
 							>
 								<Button variant='info' size='lg' block>
-									Take me to the code!
+									GREAT SCOTT! TAKE ME TO THE CODE!
 								</Button>
 							</a>
 						</Col>

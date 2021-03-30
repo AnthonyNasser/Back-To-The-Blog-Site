@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, ListGroup, Button, Figure } from 'react-bootstrap'
+import { Row, Col, ListGroup, Figure } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
@@ -16,10 +16,6 @@ const BlogPage = ({ history, match }) => {
 	useEffect(() => {
 		dispatch(listBlogDetails(match.params.id))
 	}, [dispatch, match])
-
-	const saveArticleHandler = () => {
-		history.push()
-	}
 
 	return (
 		<>
@@ -50,15 +46,6 @@ const BlogPage = ({ history, match }) => {
 									value={blog.rating}
 									text={`${blog.numRatings} ratings`}
 								/>
-							</ListGroup.Item>
-							<ListGroup.Item>
-								<Button
-									onClick={saveArticleHandler}
-									variant='info'
-									type='button'
-								>
-									Save Article
-								</Button>
 							</ListGroup.Item>
 							<ListGroup.Item>{blog.article}</ListGroup.Item>
 						</ListGroup>
