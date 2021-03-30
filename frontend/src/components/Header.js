@@ -40,15 +40,9 @@ const Header = () => {
 									title={`${userInfo.firstName} ${userInfo.lastName}`}
 									id='username'
 								>
-									<LinkContainer to='/profile'>
-										<NavDropdown.Item>Profile</NavDropdown.Item>
-									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>
-										Logout
-									</NavDropdown.Item>
-									<LinkContainer to= {`/blogs/new`} >
-										<NavDropdown.Item>Create Blog</NavDropdown.Item>
-									</LinkContainer>
+										<NavDropdown.Item onClick={logoutHandler}>
+											Logout
+										</NavDropdown.Item>
 								</NavDropdown>
 							) : (
 								<LinkContainer to='/login'>
