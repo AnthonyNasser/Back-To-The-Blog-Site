@@ -54,8 +54,8 @@ the code's reusability.
 - package-lock.json
 - Procile (this file is necessary to launch the application with heroku)
    
-  ## Launch
-  The site is live via this [link](https://back-to-the-blogs.herokuapp.com/), but it may take a minute to startup because the free version of heroku is slow.
+## Launch
+The site is live via this [link](https://back-to-the-blogs.herokuapp.com/), but it may take a minute to startup because the free version of heroku is slow.
  
 
 
